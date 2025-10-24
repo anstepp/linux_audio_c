@@ -9,7 +9,7 @@
 #include "pa_ringbuffer.c"
 #include "pa_ringbuffer.h"
 
-#include "waves.h"
+#include "synthesis/waves.h"
 
 #define SR 44100
 #define OUT_CHANS 2
