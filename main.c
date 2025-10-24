@@ -5,6 +5,7 @@
 #include <stdint.h>
 #include <stdio.h>
 
+#include "pa_custom/pa_err_custom.h"
 #include "portaudio.h"
 #include "pa_ringbuffer.c"
 #include "pa_ringbuffer.h"
@@ -15,14 +16,6 @@
 #define OUT_CHANS 2
 #define BUF_FRAMES 256
 
-int check_pa_err(PaError pa_err){
-	if(paNoError != pa_err){
-		puts(Pa_GetErrorText(pa_err));
-		return(pa_err);
-	}
-
-	return(0);
-}
 
 static int jackCallback(){
 	return 0;
